@@ -1,0 +1,19 @@
+p {
+    color: orange;
+    font-size: 16px;
+}
+
+/* Class action */
+.Emphasis{
+    color:orange;
+    font-style: italic;
+    font-size:24px;
+}
+
+/* ID selector : The properties specified within here apply only to page elements with the specific id.*/
+
+#Aprameya{
+    color:navy;
+    font-style: normal;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
