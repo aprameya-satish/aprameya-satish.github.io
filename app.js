@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initSmoothScroll();
   initReveal();
   initPubFilters();
+  initContactForm();
   setYear();
 });
 
@@ -122,6 +123,82 @@ function initPubFilters() {
         group.hidden = !show;
       });
     });
+  });
+}
+
+function initContactForm() {
+  const form = document.getElementById("contact-form");
+  if (!form) return;
+
+  const status = document.getElementById("contact-status");
+  const submit = document.getElementById("contact-submit");
+  const endpoint = ((window.SITE_CONTACT && window.SITE_CONTACT.formspreeEndpoint) || "").trim();
+
+  const setStatus = (message, kind) => {
+    if (!status) return;
+    status.textContent = message;
+    status.dataset.kind = kind || "";
+  };
+
+  if (!endpoint) {
+    setStatus(
+      "The private contact form needs a one-time Formspree setup (see contact-config.js). Meanwhile, please use LinkedIn.",
+      "warn"
+    );
+  }
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    if (!endpoint) {
+      setStatus("Contact form is not connected yet. Please reach out via LinkedIn.", "error");
+      return;
+    }
+
+    const honeypot = form.querySelector('input[name="_gotcha"]');
+    if (honeypot && honeypot.value) {
+      setStatus("Thanks — your message was sent.", "success");
+      form.reset();
+      return;
+    }
+
+    if (!form.reportValidity()) return;
+
+    const payload = {
+      name: form.name.value.trim(),
+      email: form.email.value.trim(),
+      subject: form.subject.value.trim(),
+      message: form.message.value.trim(),
+      _replyto: form.email.value.trim(),
+    };
+
+    submit.disabled = true;
+    setStatus("Sending…", "pending");
+
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+
+      form.reset();
+      setStatus("Thanks — your message was sent. I’ll get back to you soon.", "success");
+    } catch (_) {
+      setStatus(
+        "Something went wrong sending that message. Please try again or use LinkedIn.",
+        "error"
+      );
+    } finally {
+      submit.disabled = false;
+    }
   });
 }
 
