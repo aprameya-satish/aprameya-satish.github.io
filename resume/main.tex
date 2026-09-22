@@ -1,0 +1,249 @@
+%-------------------------
+% Resume in Latex
+% Author : Aprameya Satish
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10.8pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[numbers]{natbib}
+\usepackage{bibentry}
+
+
+% Set
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-3pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeItemWithoutTitle}[1]{
+  \item\small{
+    {\vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheadingWithoutTitle}[2]{
+  \vspace{-1pt}\item[]
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\newcommand{\publicationItem}[1]{
+    \item \bibentry{#1}
+}
+
+% For items with descriptions
+\renewcommand{\labelitemii}{$\circ$}
+
+% Format itemized / enumerated lists
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\PublicationListStart}{\begin{enumerate}}
+\newcommand{\PublicationListEnd}{\end{enumerate}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\bibliographystyle{ieeetr}
+\nobibliography{publications}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\LARGE Aprameya Satish}} & Email : \href{mailto:aprameya.satish@gmail.com}{aprameya.satish@gmail.com}\\
+  \href{https://www.linkedin.com/in/aprameya-satish/}{LinkedIn: linkedin.com/in/aprameya-satish} & Mobile : +1 (470) 263-2882\\
+  Active Secret Clearance & \href{https://aprameya-satish.github.io/}{aprameya-satish.github.io}\\
+\end{tabular*}
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Georgia Institute of Technology}{Atlanta, GA}
+      {Ph.D. in Mechanical Engineering; GPA: 4.0}{Aug 2015 -- Dec 2020}
+    \resumeSubheading
+        {Georgia Institute of Technology}{Atlanta, GA}
+        {M.S. in Electrical and Computer Engineering; GPA: 4.0}{Aug 2017 -- Dec 2020}
+    \resumeSubheading
+      {BMS College of Engineering}{Bangalore, India}
+      {Bachelor of Mechanical Engineering}{Aug 2009 -- June 2013}
+  \resumeSubHeadingListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+\section{Skills}
+	\resumeSubHeadingListStart
+	\resumeSubItem{Languages}{Python, MATLAB, C/C++}
+	\resumeSubItem{Domain Knowledge}{Applied machine learning for acoustics, RADAR, SONAR, and health; statistical signal processing; spatial array processing; computer vision; acoustics and infrasound; elastic wave propagation}
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------------
+\section{Experience}
+    \resumeSubHeadingListStart
+        \resumeSubheading
+        {Georgia Tech Research Institute}{Smyrna, GA}
+        {Senior Research Engineer}{Dec 2020 -- Present}
+        \resumeItemListStart
+              \resumeItem{Vibroacoustic based Pipeline Leak Detection}{Technical lead responsible for experiment design, data management, and statistical DSP and ML algorithm development for pipeline leak detection using vibroacoustic datastreams.}
+              \resumeItem{Cognitive Radar Modeling}{Technical lead for ML algorithm development for a new cognitive radar program at GTRI, sponsored by the Missile and Space Intelligence Center (MSIC).}
+              \resumeItem{Soldier fitness and health monitoring}
+              {Key contributor in GTRI's signal processing and machine learning work in a multi-million dollar, cross-collaborative effort with Georgia Tech on an ONR-sponsored military health monitoring and prediction project, resulting in multiple publications and a patent.}
+              \resumeItem{Infrasonic source localization and classification}{Developed a signal processing pipeline that uses measurements from infrasound sensor arrays to localize infrasonic targets of interest. Built ML models for infrasound signature classification, and developed a synthetic infrasound signature modeling software suite.}
+              \resumeItem{SAR Automatic Target Recognition}{Key contributor in the signal processing and deep-learning based target detection efforts for AFLCMC-sponsored automatic target detection and recognition using SAR data.}
+              \resumeItem{Computer-Vision based underwater target detection}{Technical lead on an internal program to build machine learning algorithms for underwater landmark detection from SONAR data for autonomous vehicle localization.}
+              \resumeItem{UAV tracking using acoustic beamforming}{Headed algorithm development for outdoor UAV tracking using spherical array acoustic beamforming for a DARPA program.}
+              \resumeItem{Infrasound and Acoustic exposure analysis}{Working with WRAIR (US Army), NSWC, and Raytheon on mitigating sound and infrasound exposure to soldiers during weapons and blast training.}
+              \resumeItem{Maritime Infrasound Monitoring System}{Coordinated the full wireless communications and signal processing pipeline for a realtime infrasound beamforming dashboard for the ONR.}
+              \resumeItem{Internal Research Management}
+              {Secured and managed approximately \$210k of internal funding to develop new technologies in underwater navigation and threat detection using acoustics, and machine learning for health.}
+        \resumeItemListEnd
+
+        \resumeSubheading
+        {Georgia Institute of Technology}{Atlanta, GA}
+        {Graduate Research Assistant}{Jan 2018 -- Jul 2018}
+        \resumeItemListStart
+                \resumeItem{Auditory UAV based source localization}
+                  {Worked on acoustic source localization in low and very low SNR environments using ground-mounted and Micro-Aerial Vehicle (MAV/drone) mounted microphone arrays.}
+                \resumeItem{Monochannel audio source separation}
+                  {Implemented a statistical machine learning framework for acoustic source and noise separation based on latent variable decompositions of audio recordings that works with limited training data.}
+                \resumeItem{Jet Noise analysis using NMF}
+                  {Applied non-negative matrix factorization to study jet engine mode-switching---a combustion instability.}
+        \resumeItemListEnd
+
+        \resumeSubheading
+        {SpaceX}{Hawthorne, CA}
+        {Propulsion Dynamics Intern}{May 2016 -- Aug 2016}
+        \resumeItemListStart
+            \resumeItem{Merlin Engine Dynamics Analysis}{Analyzed engine dynamics from pressure, accelerometer, and strain gauge data for the Merlin Stage I and vacuum engines to qualify engine performance. Performed statistical analyses on combustion chamber pressure and peripheral sensor measurements to define nominal operating parameters for Stage 1 and vacuum engines. Automated the process of evaluating engine fatigue using rainflow analyses on strain gauge data.}
+        \resumeItemListEnd
+    
+        % \resumeSubheading
+        % {Mercedes-Benz RD India}{Bangalore, India}
+        % {Product Design Engineer}{Jul 2013 - Jul 2015}
+        % \resumeItemListStart
+        %     \resumeItem{Transmission Design}{}
+        %     \begin{description}[font=$\bullet$]
+        %     \item{Developed engineering design solutions and analyses for commercial vehicle transmissions for the Mitsubishi FUSO product family.}
+        %     \item{Performed transmission component stress simulations, advanced parametric CAD modelling, and GD\&T of transmission assemblies.}
+        %     \item{Led the redesign of an existing transmission case for a medium duty vehicle for a change in manufacturing techniques and compatibility among future variants.}
+        %     \end{description}
+            
+        %     \resumeItem{CAD Automation}
+        %     {Initiated and led development of AutoGear, an automated CAD prototyping software for rapid gear modelling and performance analysis which was deployed across Daimler.}
+        % \resumeItemListEnd
+    \resumeSubHeadingListEnd
+    
+%-----------PUBLICATIONS-------------
+\section{PhD Thesis}
+\bibentry{satish2020-ADP}
+    
+\section{Refereed Journal Papers}    
+    \PublicationListStart
+        \publicationItem{satish2023-PSP}
+        \publicationItem{satish2023-EPI}
+        \publicationItem{satish2021-pua}
+        \publicationItem{satish2020-OPA}
+        \publicationItem{satish2019-PUA}
+
+    \PublicationListEnd
+
+\section{Conference Proceedings}
+    \PublicationListStart
+        \publicationItem{satish2025-DSI}
+        \publicationItem{newcomb2024-TFS}
+        \publicationItem{spexet2024-ISA}
+        \publicationItem{satish2023-ATC}
+        \publicationItem{satish2022-AUD}
+        \publicationItem{satish2021-PSJ}
+        \publicationItem{satish2019-PUC}
+        \publicationItem{satish2019-EEP}
+        \publicationItem{satish2018-TFB}
+        \publicationItem{satish2017-PUA}
+    \PublicationListEnd
+
+%-----------ACADEMIC SERVICE-------------
+\section{Professional Service}
+\begin{itemize}
+    
+    \item Treasurer, IEEE Atlanta Chapter \textit{(Feb 2022 -- Feb 2025)}
+
+    \item Technical Co-Chair, IEEE SoutheastCon 2024 \textit{(Aug 2022 -- present)}
+
+    \item Reviewer, Measurement \textit{(Dec 2020 -- present)}
+
+    \item Reviewer, Acoustical Society of America \textit{(Dec 2020 -- present)}
+
+    \item Grant Committee Member, Melton Foundation \textit{(Dec 2020 -- present)}
+
+    \item Grad Gala Operations and Logistics Chair, GT Graduate Student Association \textit{(Mar 2020)}
+
+    \item Treasurer, Acoustical Society of America GT Student Chapter \textit{(Dec 2017)}
+
+    \item President's Undergraduate Research Award (PURA) Grant Committee Technical Reviewer \textit{(Jun 2016, Jun 2020)}
+
+    \item Co-Organizer and Compliance Officer, TEDxBangalore \textit{(Aug 2014)}
+
+    \item Senior Fellow, Melton Foundation \textit{(Jun 2013 -- present)}
+        
+\end{itemize}
+
+%-----------Awards/ Recognition-----------------
+\section{Recognition}
+\begin{description}[font=$\bullet$]
+\item {Outstanding Service Award, IEEE Atlanta Section, \textit{(Oct 2024)}}
+\item {Outstanding Service Award, GT Graduate Student Association, \textit{(Mar 2020)}}
+\item {GTRI Best Internally Funded project (IRAD) nominee, \textit{(Jun 2018)}} 
+\item {Mercedes-Benz RD Star Performer nominee, \textit{(Jun 2014)}}
+\end{description}
+%-------------------------------------------
+
+\end{document}
