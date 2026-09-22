@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications — Aprameya Satish</title>
+    <meta name="description" content="Publications by Aprameya Satish: journals, conferences, and Ph.D. thesis.">
+    <script>
+      (function () {
+        try {
+          var key = "as-theme";
+          var stored = localStorage.getItem(key);
+          var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          var theme = stored === "light" || stored === "dark" ? stored : prefersDark ? "dark" : "light";
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = theme;
+        } catch (e) {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <nav class="nav" aria-label="Primary">
+            <a class="nav__brand" href="./">
+                <span class="nav__mark" aria-hidden="true"></span>
+                Aprameya Satish
+            </a>
+            <div class="nav__actions">
+                <ul class="nav__menu" id="nav-menu">
+                    <li><a class="nav__link" href="./">Overview</a></li>
+                    <li><a class="nav__link" href="research.html">Research</a></li>
+                    <li><a class="nav__link" href="publications.html" aria-current="page">Publications</a></li>
+                    <li><a class="nav__link" href="./#contact">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle color theme">
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+                </button>
+                <button class="nav__toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+        <header class="page-header">
+            <div class="container">
+                <p class="hero__eyebrow reveal">Bibliography</p>
+                <h1 class="reveal">Publications</h1>
+                <p class="reveal">
+                    Thesis, refereed journals, and conference papers. Use the filters to jump between
+                    sections, or open a Paper button for the publisher page when available.
+                </p>
+            </div>
+        </header>
+
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <div class="pub-filters reveal" role="tablist" aria-label="Publication filters">
+                    <button type="button" class="pub-filter is-active" data-filter="all">All</button>
+                    <button type="button" class="pub-filter" data-filter="thesis">Thesis</button>
+                    <button type="button" class="pub-filter" data-filter="journal">Journals</button>
+                    <button type="button" class="pub-filter" data-filter="conference">Conferences</button>
+                    <button type="button" class="pub-filter" data-filter="patent">Patents</button>
+                </div>
+
+                <div class="pub-group" data-group="patent">
+                    <h2 class="subsection__title">Patents</h2>
+                    <ul class="plain-list" style="margin-bottom: 1.75rem;">
+                        <li>
+                            Patent arising from the ONR-sponsored soldier health monitoring collaboration
+                            with Georgia Tech <span class="muted">(application/issuance details to be confirmed)</span>.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="pub-group" data-group="thesis">
+                    <h2 class="subsection__title">Ph.D. Thesis</h2>
+                    <ol class="pub-list">
+                        <li id="pub-thesis-2020">
+                            <span class="pub-list__entry">
+                                A. Satish,
+                                <span class="pub-list__title">Analysis and Design of Passive Underwater Acoustic Identification Tags</span>.
+                                Ph.D. thesis, Georgia Institute of Technology, 2020.
+                                <a class="btn-paper" href="https://hdl.handle.net/1853/65987" target="_blank" rel="noopener noreferrer">Paper</a>
+                            </span>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="pub-group" data-group="journal">
+                    <h2 class="subsection__title">Refereed Journal Papers</h2>
+                    <ol class="pub-list">
+                        <li id="pub-lin-2023">
+                            <span class="pub-list__entry">
+                                D. J. Lin, A. Satish, K. Richardson, S. An, C. Yaldiz, M. Buller, K. Driver,
+                                E. Atkinson, T. Mesite, C. King, O. Inan, and A. Medda,
+                                <span class="pub-list__title">Predicting soldier performance on structured military training marches with wearable accelerometer and physiological data</span>.
+                                <em>IEEE Sensors Journal</em>, 2023.
+                                <a class="btn-paper" href="https://doi.org/10.1109/JSEN.2023.3330409" target="_blank" rel="noopener noreferrer">Paper</a>
+                            </span>
+                        </li>
+                        <li id="pub-yaldiz-2023">
+                            <span class="pub-list__entry">
+                                C. Yaldiz, M. Buller, K. Richardson, S. An, D. J. Lin, A. Satish, K. Driver,
+                                E. Atkinson, T. Mesite, C. King, M. Bursey, M. Galer, M. M. Stafford,
+                                M. Sawka, A. Medda, and O. Inan,
+                                <span class="pub-list__title">Early prediction of impending exertional heat stroke with wearable multimodal sensing and anomaly detection</span>.
+                                <em>IEEE Journal of Biomedical and Health Informatics</em>, 2023.
+                                <a class="btn-paper" href="https://doi.org/10.1109/JBHI.2023.3323014" target="_blank" rel="noopener noreferrer">Paper</a>
+                            </span>
+                        </li>
+                        <li id="pub-satish-shells-2021">
+                            <span class="pub-list__entry">
+                                A. Satish and K. G. Sabra,
+                                <span class="pub-list__title">Passive underwater acoustic identification tags using multi-layered shells</span>.
+                                <em>The Journal of the Acoustical Society of America</em>, vol. 149, no. 5, pp. 3387–3405, 2021.
+                                <a class="btn-paper" href="https://doi.org/10.1121/10.0004990" target="_blank" rel="noopener noreferrer">Paper</a>
+                            </span>
+                        </li>
+                        <li id="pub-satish-omni-2020">
+                            <span class="pub-list__entry">
+                                A. Satish, D. Trivett, and K. G. Sabra,
+                                <span class="pub-list__title">Omnidirectional passive acoustic identification tags for underwater navigation</span>.
+                                <em>The Journal of the Acoustical Society of America</em>, vol. 147, no. 6, pp. EL517–EL522, 2020.
+                                <a class="btn-paper" href="https://doi.org/10.1121/10.0001444" target="_blank" rel="noopener noreferrer">Paper</a>
+                            </span>
+                        </li>
+                        <li id="pub-satish-layered-2019">
+                            <span class="pub-list__entry">
+                                A. Satish, B. Nichols, D. Trivett, and K. G. Sabra,
+                                <span class="pub-list__title">Passive underwater acoustic tags using layered media</span>.
+                                <em>The Journal of the Acoustical Society of America</em>, vol. 145, no. 1, pp. EL84–EL89, 2019.
+                                <a class="btn-paper" href="https://doi.org/10.1121/1.5088007" target="_blank" rel="noopener noreferrer">Paper</a>
+                            </span>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="pub-group" data-group="conference">
+                    <h2 class="subsection__title">Conference Proceedings</h2>
+                    <ol class="pub-list">
+                        <li id="pub-das-2025">
+                            <span class="pub-list__entry">
+                                S. Das, A. Satish, N. Breen, M. Fitzpatrick, and A. Medda,
+                                <span class="pub-list__title">Development of synthetic infrasound signatures for target classification using window of opportunity observations</span>.
+                                <em>The Journal of the Acoustical Society of America</em>, 2025.
+                                <a class="btn-paper" href="https://doi.org/10.1121/10.0038191" target="_blank" rel="noopener noreferrer">Paper</a>
+                            </span>
+                        </li>
+                        <li id="pub-newcomb-2024">
+                            <span class="pub-list__entry">
+                                W. N. Newcomb, S. Reddy, A. Satish, and A. Medda,
+                                <span class="pub-list__title">Time-frequency spectral optimization of underwater sonar acoustic returns for the purpose of characterization using spectral descriptors</span>.
+                                <em>The Journal of the Acoustical Society of America</em>, vol. 156, no. 4 Supplement, pp. A25–A26, 2024.
+                                <a class="btn-paper" href="https://doi.org/10.1121/10.0034982" target="_blank" rel="noopener noreferrer">Paper</a>
+                            </span>
+                        </li>
+                        <li id="pub-spexet-2024">
+                            <span class="pub-list__entry">
+                                A. Spexet, N. Breen, A. Satish, and D. Alvord,
+                                <span class="pub-list__title">Intelligent summarization of aviation data for maintenance</span>.
+                                <em>2024 IEEE Aerospace Conference</em>, pp. 1–10, IEEE, 2024.
+                                <a class="btn-paper" href="https://doi.org/10.1109/AERO58975.2024.10521297" target="_blank" rel="noopener noreferrer">Paper</a>
+                            </span>
+                        </li>
+                        <li id="pub-satish-sar-2023">
+                            <span class="pub-list__entry">
+                                A. Satish, E. Laubie, J. Casey, and T. Selee,
+                                <span class="pub-list__title">Automatic target chip extraction from SAR images using CNNs and CFAR</span>.
+                                Automatic Target Recognition Working Group Meeting, National Geospatial Intelligence Agency, 2023.
+                            </span>
+                        </li>
+                        <li id="pub-satish-uav-2022">
+                            <span class="pub-list__entry">
+                                A. Satish and A. Medda,
+                                <span class="pub-list__title">Acoustic UAV detection using spherical array beamforming</span>.
+                                <em>2022 Asilomar Conference on Signals, Systems, and Computers</em>, IEEE, 2022.
+                                <a class="btn-paper" href="https://doi.org/10.1109/IEEECONF56349.2022.10051923" target="_blank" rel="noopener noreferrer">Paper</a>
+                            </span>
+                        </li>
+                        <li id="pub-satish-jet-2021">
+                            <span class="pub-list__entry">
+                                A. Satish, A. Karon, and A. Medda,
+                                <span class="pub-list__title">Predicting supersonic jet mode-switching using non-negative matrix factorization</span>.
+                                <em>The Journal of the Acoustical Society of America</em>, vol. 150, no. 4, pp. A177–A177, 2021.
+                                <a class="btn-paper" href="https://doi.org/10.1121/10.0008040" target="_blank" rel="noopener noreferrer">Paper</a>
+                            </span>
+                        </li>
+                        <li id="pub-satish-curved-2019">
+                            <span class="pub-list__entry">
+                                A. Satish, D. Trivett, and K. G. Sabra,
+                                <span class="pub-list__title">Passive underwater acoustic tags with curved symmetry for navigation and information encoding</span>.
+                                <em>The Journal of the Acoustical Society of America</em>, vol. 145, no. 3, pp. 1937–1937, 2019.
+                                <a class="btn-paper" href="https://doi.org/10.1121/1.5102058" target="_blank" rel="noopener noreferrer">Paper</a>
+                            </span>
+                        </li>
+                        <li id="pub-satish-eval-2019">
+                            <span class="pub-list__entry">
+                                A. Satish, D. Trivett, and K. G. Sabra,
+                                <span class="pub-list__title">Experimental evaluation of passive underwater acoustic markers</span>.
+                                <em>The Journal of the Acoustical Society of America</em>, vol. 146, no. 4, pp. 3019–3019, 2019.
+                                <a class="btn-paper" href="https://doi.org/10.1121/1.5137463" target="_blank" rel="noopener noreferrer">Paper</a>
+                            </span>
+                        </li>
+                        <li id="pub-satish-mav-2018">
+                            <span class="pub-list__entry">
+                                A. Satish and A. Medda,
+                                <span class="pub-list__title">Time-frequency beamforming adaptation for micro aerial vehicle (MAV) noise suppression and source localization</span>.
+                                <em>2018 52nd Asilomar Conference on Signals, Systems, and Computers</em>, pp. 884–888, IEEE, 2018.
+                                <a class="btn-paper" href="https://doi.org/10.1109/ACSSC.2018.8645315" target="_blank" rel="noopener noreferrer">Paper</a>
+                            </span>
+                        </li>
+                        <li id="pub-satish-markers-2017">
+                            <span class="pub-list__entry">
+                                A. Satish, B. Nichols, D. Trivett, and K. G. Sabra,
+                                <span class="pub-list__title">Passive underwater acoustic markers for navigation and information encoding for high frequency SONAR devices</span>.
+                                <em>The Journal of the Acoustical Society of America</em>, vol. 142, no. 4, pp. 2731–2731, 2017.
+                                <a class="btn-paper" href="https://doi.org/10.1121/1.5014975" target="_blank" rel="noopener noreferrer">Paper</a>
+                            </span>
+                        </li>
+                    </ol>
+                </div>
+
+                <p class="pub-note">
+                    Prefer a single PDF bibliography?
+                    <a href="assets/Aprameya_Satish_Resume.pdf" download>Download the CV</a>.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="year">2026</span> Aprameya Satish</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
