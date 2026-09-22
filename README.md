@@ -11,16 +11,9 @@ Academic site for [Aprameya Satish](https://www.linkedin.com/in/aprameya-satish/
 
 ## Private contact form
 
-The site never shows a personal email. Messages go through [Formspree](https://formspree.io):
+The site never shows a personal email. Messages go through [Web3Forms](https://web3forms.com) (free forever, 250 submissions/month).
 
-1. Create a free Formspree form and register your private email there.
-2. Put the endpoint in `contact-config.js`:
-
-```js
-window.SITE_CONTACT = {
-  formspreeEndpoint: "https://formspree.io/f/xxxxxxxx"
-};
-```
+Configure the access key in `contact-config.js` (already set for this site). Your notification email stays in the Web3Forms dashboard.
 
 ## Local preview
 

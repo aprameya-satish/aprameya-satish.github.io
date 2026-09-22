@@ -132,7 +132,8 @@ function initContactForm() {
 
   const status = document.getElementById("contact-status");
   const submit = document.getElementById("contact-submit");
-  const endpoint = ((window.SITE_CONTACT && window.SITE_CONTACT.formspreeEndpoint) || "").trim();
+  const accessKey = ((window.SITE_CONTACT && window.SITE_CONTACT.web3formsAccessKey) || "").trim();
+  const endpoint = "https://api.web3forms.com/submit";
 
   const setStatus = (message, kind) => {
     if (!status) return;
@@ -140,9 +141,9 @@ function initContactForm() {
     status.dataset.kind = kind || "";
   };
 
-  if (!endpoint) {
+  if (!accessKey) {
     setStatus(
-      "The private contact form needs a one-time Formspree setup (see contact-config.js). Meanwhile, please use LinkedIn.",
+      "The private contact form needs a Web3Forms access key (see contact-config.js). Meanwhile, please use LinkedIn.",
       "warn"
     );
   }
@@ -150,7 +151,7 @@ function initContactForm() {
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    if (!endpoint) {
+    if (!accessKey) {
       setStatus("Contact form is not connected yet. Please reach out via LinkedIn.", "error");
       return;
     }
@@ -165,11 +166,14 @@ function initContactForm() {
     if (!form.reportValidity()) return;
 
     const payload = {
+      access_key: accessKey,
       name: form.name.value.trim(),
       email: form.email.value.trim(),
-      subject: form.subject.value.trim(),
+      subject: form.subject.value.trim() || "Website contact",
       message: form.message.value.trim(),
-      _replyto: form.email.value.trim(),
+      from_name: "aprameya-satish.github.io",
+      replyto: form.email.value.trim(),
+      botcheck: false,
     };
 
     submit.disabled = true;
@@ -185,8 +189,9 @@ function initContactForm() {
         body: JSON.stringify(payload),
       });
 
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}`);
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok || data.success === false) {
+        throw new Error(data.message || `HTTP ${response.status}`);
       }
 
       form.reset();

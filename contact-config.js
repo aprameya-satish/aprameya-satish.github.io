@@ -1,7 +1,7 @@
-// Contact form backend (Formspree).
-// 1. Create a free form at https://formspree.io and point it at your private email.
-// 2. Paste the form endpoint below (looks like https://formspree.io/f/xxxxxxxx).
-// Your email stays on Formspree and is never shown on this website.
+// Contact form backend (Web3Forms — free forever plan).
+// Your notification email is configured in the Web3Forms dashboard and is
+// never shown on this website. The access key is meant to be public in
+// client-side code.
 window.SITE_CONTACT = {
-  formspreeEndpoint: ""
+  web3formsAccessKey: "f74db473-bbcd-4ee1-b376-88ff0b50d5dd"
 };
