@@ -10,4 +10,5 @@ pdflatex main.tex
 pdflatex main.tex
 ```
 
-The compiled PDF is copied to `assets/Aprameya_Satish_Resume.pdf` for the website download link.
+The compiled PDF is copied to `assets/Aprameya_Satish_Resume.pdf` for archival use.
+It is not linked from the public site.
