@@ -1,10 +1,29 @@
 document.addEventListener("DOMContentLoaded", () => {
+  initThemeToggle();
   initMobileNav();
+  initHeaderScroll();
   initSmoothScroll();
-  initActiveNav();
   initReveal();
+  initPubFilters();
   setYear();
 });
+
+function initThemeToggle() {
+  const button = document.getElementById("theme-toggle");
+  if (!button) return;
+
+  button.addEventListener("click", () => {
+    const current = document.documentElement.dataset.theme === "dark" ? "dark" : "light";
+    const next = current === "dark" ? "light" : "dark";
+    document.documentElement.dataset.theme = next;
+    document.documentElement.style.colorScheme = next;
+    try {
+      localStorage.setItem("as-theme", next);
+    } catch (_) {
+      /* ignore */
+    }
+  });
+}
 
 function initMobileNav() {
   const toggle = document.getElementById("nav-toggle");
@@ -21,7 +40,7 @@ function initMobileNav() {
     toggle.setAttribute("aria-expanded", String(open));
   });
 
-  menu.querySelectorAll(".nav__link").forEach((link) => {
+  menu.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", close);
   });
 
@@ -30,6 +49,18 @@ function initMobileNav() {
       close();
     }
   });
+}
+
+function initHeaderScroll() {
+  const header = document.querySelector(".site-header");
+  if (!header) return;
+
+  const update = () => {
+    header.classList.toggle("is-scrolled", window.scrollY > 8);
+  };
+
+  update();
+  window.addEventListener("scroll", update, { passive: true });
 }
 
 function initSmoothScroll() {
@@ -50,30 +81,6 @@ function initSmoothScroll() {
   });
 }
 
-function initActiveNav() {
-  const sections = [...document.querySelectorAll("main section[id]")];
-  const links = [...document.querySelectorAll(".nav__link")];
-  if (!sections.length || !links.length) return;
-
-  const update = () => {
-    const header = document.querySelector(".site-header");
-    const marker = window.scrollY + (header?.offsetHeight || 0) + 80;
-    let current = sections[0]?.id || "";
-
-    sections.forEach((section) => {
-      if (section.offsetTop <= marker) current = section.id;
-    });
-
-    links.forEach((link) => {
-      const href = link.getAttribute("href");
-      link.classList.toggle("is-active", href === `#${current}`);
-    });
-  };
-
-  update();
-  window.addEventListener("scroll", update, { passive: true });
-}
-
 function initReveal() {
   const items = document.querySelectorAll(".reveal");
   if (!items.length) return;
@@ -92,12 +99,29 @@ function initReveal() {
         }
       });
     },
-    { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+    { threshold: 0.1, rootMargin: "0px 0px -6% 0px" }
   );
 
   items.forEach((el, index) => {
-    el.style.transitionDelay = `${Math.min(index % 6, 5) * 40}ms`;
+    el.style.transitionDelay = `${Math.min(index % 5, 4) * 35}ms`;
     observer.observe(el);
+  });
+}
+
+function initPubFilters() {
+  const filters = document.querySelectorAll(".pub-filter");
+  const groups = document.querySelectorAll(".pub-group");
+  if (!filters.length || !groups.length) return;
+
+  filters.forEach((button) => {
+    button.addEventListener("click", () => {
+      const filter = button.dataset.filter || "all";
+      filters.forEach((b) => b.classList.toggle("is-active", b === button));
+      groups.forEach((group) => {
+        const show = filter === "all" || group.dataset.group === filter;
+        group.hidden = !show;
+      });
+    });
   });
 }
 
