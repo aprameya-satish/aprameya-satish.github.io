@@ -33,10 +33,11 @@ function initMobileNav() {
 }
 
 function initSmoothScroll() {
-  document.querySelectorAll('.nav__link[href^="#"]').forEach((link) => {
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
     link.addEventListener("click", (event) => {
       const id = link.getAttribute("href");
-      const target = id ? document.querySelector(id) : null;
+      if (!id || id === "#") return;
+      const target = document.querySelector(id);
       if (!target) return;
 
       event.preventDefault();
@@ -44,6 +45,7 @@ function initSmoothScroll() {
       const offset = (header?.offsetHeight || 0) + 12;
       const top = target.getBoundingClientRect().top + window.scrollY - offset;
       window.scrollTo({ top, behavior: "smooth" });
+      history.pushState(null, "", id);
     });
   });
 }
