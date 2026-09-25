@@ -5,7 +5,8 @@ Academic site for [Aprameya Satish](https://www.linkedin.com/in/aprameya-satish/
 ## Pages
 
 - `index.html` — Overview + private contact form
-- `research.html` — Research programs & experience
+- `research.html` — Research programs, education, service
+- `experience.html` — Role history
 - `publications.html` — Full bibliography
 - `resume/` — LaTeX CV source (not linked from the public site)
 
