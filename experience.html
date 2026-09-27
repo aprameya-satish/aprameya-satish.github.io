@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience — Aprameya Satish</title>
+    <meta name="description" content="Professional experience: GTRI, Georgia Tech, SpaceX, and Mercedes-Benz R&amp;D.">
+    <script>
+      (function () {
+        try {
+          var key = "as-theme";
+          var stored = localStorage.getItem(key);
+          var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          var theme = stored === "light" || stored === "dark" ? stored : prefersDark ? "dark" : "light";
+          document.documentElement.dataset.theme = theme;
+          document.documentElement.style.colorScheme = theme;
+        } catch (e) {
+          document.documentElement.dataset.theme = "light";
+        }
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <nav class="nav" aria-label="Primary">
+            <a class="nav__brand" href="./">
+                <span class="nav__mark" aria-hidden="true"></span>
+                Aprameya Satish
+            </a>
+            <div class="nav__actions">
+                <ul class="nav__menu" id="nav-menu">
+                    <li><a class="nav__link" href="./">Overview</a></li>
+                    <li><a class="nav__link" href="research.html">Research</a></li>
+                    <li><a class="nav__link" href="experience.html" aria-current="page">Experience</a></li>
+                    <li><a class="nav__link" href="publications.html">Publications</a></li>
+                    <li><a class="nav__link" href="./#contact">Contact</a></li>
+                </ul>
+                <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle color theme">
+                    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+                </button>
+                <button class="nav__toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+        <header class="page-header">
+            <div class="container">
+                <p class="hero__eyebrow reveal">Role history</p>
+                <h1 class="reveal">Experience</h1>
+                <p class="reveal">
+                    Positions and selected project threads. Program themes are on the
+                    <a href="research.html">research page</a>; papers are linked from each role.
+                </p>
+            </div>
+        </header>
+
+        <section id="experience" class="section section--band">
+            <div class="container">
+                <article class="job reveal">
+                    <header class="job__header">
+                        <div>
+                            <h2 class="job__title">Senior Research Engineer</h2>
+                            <p class="job__org">Georgia Tech Research Institute · Smyrna, GA</p>
+                        </div>
+                        <time class="job__dates" datetime="2020-12">Dec 2020 – Present</time>
+                    </header>
+                    <ul class="job__bullets">
+                        <li>
+                            <strong>Cognitive radar modeling</strong> —
+                            Technical lead for ML algorithm development on a new cognitive radar
+                            program sponsored by MSIC.
+                        </li>
+                        <li>
+                            <strong>Physiological monitoring &amp; health state estimation</strong> —
+                            ONR-sponsored military fitness monitoring and prediction; extending to
+                            longitudinal athlete wearable data.
+                            <span class="job__cites">Related:
+                                <a href="publications.html#pub-lin-2023">Lin et al. 2023</a>;
+                                <a href="publications.html#pub-yaldiz-2023">Yaldiz et al. 2023</a>
+                            </span>
+                        </li>
+                        <li>
+                            <strong>Acoustic field testing &amp; source characterization</strong> —
+                            Field tests and post-test analysis for source characterization, signature
+                            extraction, annotation, and model validation.
+                        </li>
+                        <li>
+                            <strong>SONAR imaging simulator</strong> —
+                            Simulation capability for controlled synthetic returns supporting
+                            underwater sensing algorithm development.
+                            <span class="job__cites">Related:
+                                <a href="publications.html#pub-newcomb-2024">Newcomb et al. 2024</a>
+                            </span>
+                        </li>
+                        <li>
+                            <strong>Vibroacoustic pipeline leak detection</strong> —
+                            Technical lead for experiment design, data management, and DSP/ML
+                            algorithms on vibroacoustic datastreams.
+                        </li>
+                        <li>
+                            <strong>Infrasonic localization &amp; classification</strong> —
+                            Array pipelines, ML classifiers, and synthetic signature modeling.
+                            <span class="job__cites">Related:
+                                <a href="publications.html#pub-das-2025">Das et al. 2025</a>
+                            </span>
+                        </li>
+                        <li>
+                            <strong>SAR ATR</strong> —
+                            Signal processing and deep-learning target detection for AFLCMC-sponsored SAR ATR.
+                            <span class="job__cites">Related:
+                                <a href="publications.html#pub-satish-sar-2023">Satish et al. 2023</a>
+                            </span>
+                        </li>
+                        <li>
+                            <strong>Underwater landmark detection</strong> —
+                            Technical lead for SONAR-based landmark detection for AUV localization.
+                        </li>
+                        <li>
+                            <strong>UAV acoustic beamforming</strong> —
+                            Outdoor UAV tracking with spherical-array beamforming (DARPA).
+                            <span class="job__cites">Related:
+                                <a href="publications.html#pub-satish-uav-2022">Satish &amp; Medda 2022</a>
+                            </span>
+                        </li>
+                        <li>
+                            <strong>Exposure analysis &amp; maritime monitoring</strong> —
+                            WRAIR/NSWC/Raytheon blast exposure work; ONR realtime infrasound dashboard.
+                        </li>
+                        <li>
+                            <strong>Internal research management</strong> —
+                            Secured and managed approximately $210k IRAD funding.
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="job reveal">
+                    <header class="job__header">
+                        <div>
+                            <h2 class="job__title">Graduate Research Assistant</h2>
+                            <p class="job__org">Georgia Institute of Technology · Atlanta, GA</p>
+                        </div>
+                        <time class="job__dates" datetime="2018-01">Jan 2018 – Jul 2018</time>
+                    </header>
+                    <ul class="job__bullets">
+                        <li>
+                            Low-SNR acoustic source localization with ground and MAV microphone arrays.
+                            <span class="job__cites">Related:
+                                <a href="publications.html#pub-satish-mav-2018">Satish &amp; Medda 2018</a>
+                            </span>
+                        </li>
+                        <li>Single-channel source/noise separation via latent variable decompositions.</li>
+                        <li>
+                            NMF analysis of jet-engine mode-switching.
+                            <span class="job__cites">Related:
+                                <a href="publications.html#pub-satish-jet-2021">Satish et al. 2021</a>
+                            </span>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="job reveal">
+                    <header class="job__header">
+                        <div>
+                            <h2 class="job__title">Propulsion Dynamics Intern</h2>
+                            <p class="job__org">SpaceX · Hawthorne, CA</p>
+                        </div>
+                        <time class="job__dates" datetime="2016-05">May 2016 – Aug 2016</time>
+                    </header>
+                    <ul class="job__bullets">
+                        <li>
+                            Merlin Stage I / vacuum engine dynamics from pressure, accelerometer, and
+                            strain data; nominal envelopes; automated rainflow fatigue evaluation.
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="job reveal">
+                    <header class="job__header">
+                        <div>
+                            <h2 class="job__title">Product Design Engineer</h2>
+                            <p class="job__org">Mercedes-Benz Research &amp; Development India · Bangalore, India</p>
+                        </div>
+                        <time class="job__dates" datetime="2013-07">Jul 2013 – Jul 2015</time>
+                    </header>
+                    <ul class="job__bullets">
+                        <li>
+                            <strong>Transmission design</strong> —
+                            FUSO commercial vehicle transmissions: stress simulation, parametric CAD,
+                            GD&amp;T; led transmission-case redesign.
+                        </li>
+                        <li>
+                            <strong>CAD automation</strong> —
+                            Initiated and led AutoGear for rapid gear modeling, deployed across Daimler.
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="year">2026</span> Aprameya Satish</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
